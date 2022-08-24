@@ -1,0 +1,8 @@
+<p>sup</p>
+<h1>Here are all the reviews</h1>
+<ul>
+  <% @reviews.each do |r| %>
+    <li><%= link_to r.name, new_restaurant_review_path(r) %></li>
+  <% end %>
+</ul>
+<p><%= link_to "Want to see some reviews?", restaurant_reviews_path %></p>
